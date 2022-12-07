@@ -100,6 +100,8 @@ function updateSecurityCode(code) {
 }
 
 cardNumberMasked.on("accept", () => {
+    const cardType = cardNumberMasked.masked.currentMask.cardtype;
+    setCardType(cardType);
     updateCardNumber(cardNumberMasked.value);
 })
 
